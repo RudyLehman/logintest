@@ -46,6 +46,12 @@ angular.module('starter', ['ionic'])
             });
         }
 
+        $scope.logout = function () {
+            ref.unauth();
+            $timeout(function(){
+                $scope.authData = "logged out";;
+            });
+        }
 
     });
 
