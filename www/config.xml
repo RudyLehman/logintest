@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widget xmlns         = "http://www.w3.org/ns/widgets"
+        xmlns:gap     = "http://phonegap.com/ns/1.0"
+        xmlns:android = "http://schemas.android.com/apk/res/android"
+        id            = "com.login.test"
+        version       = "0.0.1">
+
+    <name>LoginTest 0.01</name>
+
+    <description>
+        Firebase Social Login Test
+    </description>
+
+    <author href="http://soccermobia.com" email="support@sportmobia.com">
+        SoccerMobia Team
+    </author>
+
+    <preference name="phonegap-version" value="3.6.3" />
+    <preference name="orientation" value="portrait" />
+
+    <!-- Core plugins -->
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
+
+    <access origin="*"/>
+    <access uri="https://*.firebaseio.com" subdomains="true" />
+
+
+</widget>
