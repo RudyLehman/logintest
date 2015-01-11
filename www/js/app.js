@@ -47,9 +47,12 @@ angular.module('starter', ['ionic'])
         }
         $scope.appVersion = function () {
             $scope.authData = "appVersion";
-            getAppVersion(function(version) {
-                $scope.authData = 'Native App Version: ' + version;
-            });
+            //getAppVersion(function(version) {
+            //    $scope.authData = 'Native App Version: ' + version;
+            //});
+
+            $scope.authData  = device.platform;
+
         }
 
     });
