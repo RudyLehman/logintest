@@ -13,13 +13,13 @@ angular.module('starter', ['ionic'])
 
     .controller('AppCtrl', function ($scope, $timeout) {
 
-        var ref = new Firebase("https://soccermobia.firebaseio.com/");
 
         $scope.angularVersion = window.angular.version.full;
         $scope.ionicVersion = window.ionic.version;
         $scope.platform = window.ionic.Platform.platform();
 
         $scope.loginGoogle = function () {
+            var ref = new Firebase("https://soccermobia.firebaseio.com/");
             $scope.authData = "Google";
                 ref.authWithOAuthPopup("google", function (error, authData) {
                 $timeout(function(){
@@ -32,6 +32,7 @@ angular.module('starter', ['ionic'])
         };
 
         $scope.loginFacebook = function () {
+            var ref = new Firebase("https://soccermobia.firebaseio.com/");
             $scope.authData = "Facebook";
             ref.authWithOAuthPopup("facebook", function (error, authData) {
                 $timeout(function(){
@@ -43,6 +44,7 @@ angular.module('starter', ['ionic'])
         };
 
         $scope.loginTwitter = function () {
+            var ref = new Firebase("https://soccermobia.firebaseio.com/");
             $scope.authData = "Twitter";
             ref.authWithOAuthPopup("twitter", function (error, authData) {
                 $timeout(function(){
@@ -53,9 +55,8 @@ angular.module('starter', ['ionic'])
 
         $scope.logout = function () {
 
+            var ref = new Firebase("https://soccermobia.firebaseio.com/");
             ref.unauth();
-            ref = null;
-            ref = new Firebase("https://soccermobia.firebaseio.com/");
 
             $timeout(function(){
                 $scope.authData = "logged out";;
