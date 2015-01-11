@@ -20,6 +20,7 @@
     <preference name="orientation" value="portrait" />
 
     <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <gap:plugin name="net.bgta.phonegap.plugin.appversion" version="1.1.1" />
 
     <access origin="*"/>
     <access uri="https://*.firebaseio.com" subdomains="true" />
