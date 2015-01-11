@@ -51,7 +51,11 @@ angular.module('starter', ['ionic'])
         }
 
         $scope.logout = function () {
+
             ref.unauth();
+            ref = null;
+            ref = new Firebase("https://soccermobia.firebaseio.com/");
+
             $timeout(function(){
                 $scope.authData = "logged out";;
             });
