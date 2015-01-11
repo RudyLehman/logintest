@@ -26,6 +26,7 @@ angular.module('starter', ['ionic'])
                     $scope.authData = authData;
                 })
             }, {
+                remember: "sessiononly",
                 scope: "profile,email,openid"
             });
         };
