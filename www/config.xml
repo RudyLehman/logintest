@@ -19,7 +19,6 @@
     <preference name="phonegap-version" value="3.6.3" />
     <preference name="orientation" value="portrait" />
 
-    <!-- Core plugins -->
     <gap:plugin name="org.apache.cordova.inappbrowser" />
 
     <access origin="*"/>
