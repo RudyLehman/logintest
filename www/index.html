@@ -8,18 +8,29 @@
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-    <script src="lib/firebase/2.0.6/firebase.js"></script>
+    <script src="lib/firebase/2.1.0/firebase.js"></script>
     <script src="cordova.js"></script>
     <script src="js/app.js"></script>
 </head>
 
 <body ng-app="starter" ng-controller="AppCtrl">
-
+<h4>
+    App demonstrating Firebase bug.
+</h4>
 <button ng-click="loginGoogle()" style="margin:15px">Google</button>
 <button ng-click="loginFacebook()" style="margin:15px">Facebook</button>
 <button ng-click="loginTwitter()" style="margin:15px">Twitter</button>
 <br>
 <button ng-click="logout()" style="margin:15px">Logout</button>
+
+<br>
+Firebase: 2.1.0
+<br>
+Angular: {{angularVersion}}
+<br>
+Ionic: {{ionicVersion}}
+<br>
+Platform: {{platform}}
 
 <hr>
 <pre>{{authData | json}}</pre>

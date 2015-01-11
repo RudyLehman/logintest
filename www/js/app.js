@@ -15,12 +15,16 @@ angular.module('starter', ['ionic'])
 
         var ref = new Firebase("https://soccermobia.firebaseio.com/");
 
+        $scope.angularVersion = window.angular.version.full;
+        $scope.ionicVersion = window.ionic.version;
+        $scope.platform = window.ionic.Platform.platform();
+
         $scope.loginGoogle = function () {
             $scope.authData = "Google";
                 ref.authWithOAuthPopup("google", function (error, authData) {
                 $timeout(function(){
                     $scope.authData = authData;
-                });
+                })
             }, {
                 scope: "profile,email,openid"
             });
@@ -31,7 +35,7 @@ angular.module('starter', ['ionic'])
             ref.authWithOAuthPopup("facebook", function (error, authData) {
                 $timeout(function(){
                     $scope.authData = authData;
-                });
+                })
             }, {
                 scope: "public_profile,email,user_friends"
             });
