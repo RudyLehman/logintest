@@ -13,7 +13,7 @@ angular.module('starter', ['ionic'])
 
     .controller('AppCtrl', function ($scope, $timeout) {
 
-        var ref = new Firebase("https://soccermobia.firebaseio.com/");
+        var ref = new Firebase("https://YOUR_FIREBASE.firebaseio.com/");
 
         $scope.angularVersion = window.angular.version.full;
         $scope.ionicVersion = window.ionic.version;
