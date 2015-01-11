@@ -51,7 +51,7 @@ angular.module('starter', ['ionic'])
             //    $scope.authData = 'Native App Version: ' + version;
             //});
 
-            $scope.authData  = device.platform;
+            $scope.authData  = window.device.platform;
 
         }
 
